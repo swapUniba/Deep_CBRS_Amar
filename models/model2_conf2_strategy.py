@@ -14,8 +14,8 @@ def run_model(X_graph,X_bert,dim_graph,dim_bert,y,epochs,batch_size):
 
   input_users_2 = keras.layers.Input(shape=(dim_bert,))
   input_items_2 = keras.layers.Input(shape=(dim_bert,))
-  x2_user = keras.layers.Dense(512, activation=tf.nn.relu)(input_users_2)
-  x2_item = keras.layers.Dense(512, activation=tf.nn.relu)(input_items_2)
+  x2_user = keras.layers.Dense(768, activation=tf.nn.relu)(input_users_2)
+  x2_item = keras.layers.Dense(768, activation=tf.nn.relu)(input_items_2)
 
   #user graph + item graph
   concatenated_1 = keras.layers.Concatenate()([x1_user, x1_item])

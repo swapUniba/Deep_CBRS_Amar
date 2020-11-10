@@ -81,7 +81,7 @@ def matching_bert_emb_id(user,item,rating,user_embeddings,item_embeddings):
 
 def matching_userBert_itemGraph(user,item,rating,user_embeddings,item_embeddings):
   y = np.array(rating)
-  dim_embeddings = 768
+  dim_embeddings = len(user_embeddings['profile_embedding'][0])
   dim_X_cols = 2
   dim_X_rows = len(user)
   X = np.empty(shape=(dim_X_rows,dim_X_cols,dim_embeddings))
@@ -99,7 +99,7 @@ def matching_userBert_itemGraph(user,item,rating,user_embeddings,item_embeddings
 
 def matching_userGraph_itemBert(user,item,rating,user_embeddings,item_embeddings):
   y = np.array(rating)
-  dim_embeddings = 768
+  dim_embeddings = len(item_embeddings['embedding'][0])
   dim_X_cols = 2
   dim_X_rows = len(user)
   X = np.empty(shape=(dim_X_rows,dim_X_cols,dim_embeddings))
@@ -117,7 +117,7 @@ def matching_userGraph_itemBert(user,item,rating,user_embeddings,item_embeddings
 
 def matching_Bert_Graph_conf(user,item,rating,graph_embeddings,user_bert_embeddings,item_bert_embeddings):
   y = np.array(rating)
-  dim_embeddings = 768
+  dim_embeddings = len(item_bert_embeddings['embedding'][0])
   dim_X_cols = 4
   dim_X_rows = len(user)
   X = np.empty(shape=(dim_X_rows,dim_X_cols,dim_embeddings))
@@ -138,7 +138,7 @@ def matching_Bert_Graph_conf(user,item,rating,graph_embeddings,user_bert_embeddi
 
 def matching_Bert_Graph(user,item,rating,graph_embeddings,user_bert_embeddings,item_bert_embeddings):
   y = np.array(rating)
-  dim_embeddings_bert = 768
+  dim_embeddings_bert = len(item_bert_embeddings['embedding'][0])
   dim_embeddings_graph = len(graph_embeddings[0])
   dim_X_cols = 2
   dim_X_rows = len(user)

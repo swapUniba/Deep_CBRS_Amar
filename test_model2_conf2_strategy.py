@@ -9,11 +9,11 @@ from keras.models import Sequential
 from keras.layers import Dense
 from utilities.utils import read_ratings,read_graph_embeddings,read_bert_embedding,top_scores,matching_Bert_Graph
 
-graph_embeddings = read_graph_embeddings("embeddings/DISTMULT_512.json")
-user_bert_embeddings = read_bert_embedding("embeddings/UserProfiles_lastLayer.json")
-item_bert_embeddings = read_bert_embedding("embeddings/ITEM_embeddingslastlayer.json")
+graph_embeddings = read_graph_embeddings("embeddings/HolEembedding_768.json")
+user_bert_embeddings = read_bert_embedding("embeddings/elmo_user_embeddings_nostopw_1024.json")
+item_bert_embeddings = read_bert_embedding("embeddings/elmo_embeddings_nostopw_1024.json")
 
-user, item, rating = read_ratings('datasets/dbbook/test2id.tsv')
+user, item, rating = read_ratings('datasets/movielens/test2id.tsv')
 X_graph,X_bert,dim_graph,dim_bert,y = matching_Bert_Graph(user,item,rating,graph_embeddings,user_bert_embeddings,item_bert_embeddings)
 
 model = tf.keras.models.load_model('results/model.h5')
