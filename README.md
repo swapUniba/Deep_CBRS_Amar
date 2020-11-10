@@ -57,7 +57,7 @@ Based on the specific architecture to evaluate and the input embedding to use, i
       !python test_model2_conf.py
       !python test_model3_conf2_att.py
       
-Based on the specific architecture to evaluate and the input embedding to use, it is necessary to choose the test files corresponding to the chosen architecture. **Also in this case, before starting the execution, it is necessary to specify the embedding filenames in the chosen train file**. The testing phase will produce the top 5 and top 10 recommendations, stored in the folder “predictions”.
+Based on the specific architecture to evaluate and the input embedding to use, it is necessary to choose the test files corresponding to the chosen architecture. **Also in this case, before starting the execution, it is necessary to specify the embedding filenames in the chosen test file**. The testing phase will produce the top 5 and top 10 recommendations, stored in the folder “predictions”.
 
 **6.	Insert as third cell in the notebook:**
 
