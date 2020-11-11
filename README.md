@@ -15,7 +15,7 @@ The cell execution will clone the content of the repository to the virtual Googl
 
 This cell execution is necessary to move into the project folder.
 
-**3.	Add the necessary embedding in the embeddings folder, in the following path: ** ../Deep_CBRS_Amar/embeddings
+**3.	Add the necessary embedding in the embeddings folder, in the following path:** ../Deep_CBRS_Amar/embeddings
 
 **4.	Insert as third cell in the notebook one of these commands:**
 
@@ -57,7 +57,7 @@ Based on the specific architecture to evaluate and the input embedding to use, i
       
 Based on the specific architecture to evaluate and the input embedding to use, it is necessary to choose the test files corresponding to the chosen architecture. **Also in this case, before starting the execution, it is necessary to specify the embedding filenames in the chosen test file**. The testing phase will produce the top 5 and top 10 recommendations, stored in the folder “predictions”.
 
-**6.	Insert as third cell in the notebook:**
+**6.	Insert as fifth cell in the notebook:**
 
       !python evaluate_results.py datasets/test2id_all_pred.txt predictions
 
