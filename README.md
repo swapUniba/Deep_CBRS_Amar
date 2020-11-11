@@ -15,7 +15,7 @@ The cell execution will clone the content of the repository to the virtual Googl
 
 This cell execution is necessary to move into the project folder.
 
-**3.	Add the necessary embedding in the embeddings folder, in the following path:** ../Deep_CBRS_Amar/embeddings
+**3.	Add the necessary embeddings in the embeddings folder, in the following path:** ../Deep_CBRS_Amar/embeddings
 
 **4.	Insert as third cell in the notebook one of these commands:**
 
