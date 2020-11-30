@@ -29,6 +29,7 @@ def run_model(X,y,dim_embeddings,epochs,batch_size):
   attention_probs = keras.layers.Dense(200, activation='softmax')(concatenated)
   attention_mul = keras.layers.multiply([concatenated, attention_probs])
 
+  '''
   #BLOCCO DI ATTENZIONE 2
   attention_probs = keras.layers.Dense(200, activation='softmax')(attention_mul)
   attention_mul = keras.layers.multiply([attention_mul, attention_probs])
@@ -36,7 +37,8 @@ def run_model(X,y,dim_embeddings,epochs,batch_size):
   #BLOCCO DI ATTENZIONE 3
   attention_probs = keras.layers.Dense(200, activation='softmax')(attention_mul)
   attention_mul = keras.layers.multiply([attention_mul, attention_probs])
-  
+  '''
+
   dense_layer = keras.layers.Dense(100, activation=tf.nn.relu)(attention_mul)
 
   '''
