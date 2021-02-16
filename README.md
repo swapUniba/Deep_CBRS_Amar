@@ -62,3 +62,6 @@ Based on the specific architecture to evaluate and the input embedding to use, i
       !python evaluate_results.py datasets/test2id_all_pred.txt predictions
 
 The cell execution will compute three metrics: precision, recall and f1 score both for the top 5 and the top 10 predictions computed after the testing step and stored in the folder “predictions”. 
+
+##Deep CBRS Amar Revisited
+Some alternative models has been developed for BASIC, MIXED and EXTENDED architecures. You can find those new models on _models-alt_ directory. Thus, change the training and testing files accordingly, importing the desired models. Those new models maintain the same interface. 
