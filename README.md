@@ -23,19 +23,26 @@ This cell execution is necessary to move into the project folder.
       !python train_model1_bert.py                    (1st AMAR variant with BERT emb.)
       !python train_model1_graph_bert.py              (1st AMAR variant with BERT and OpenKE emb.)
       !python train_model2_conf.py                    (2nd AMAR variant with 2 configurations)
-      !python train_model2_conf2_strategy.py          (2nd AMAR variant with smaller OpenKE size)
-      !python train_model3_conf2_att.py               (3rd AMAR variant with attention layer)
-      !python train_model3_conf2_strategy_att.py      (3rd AMAR variant with attention, smaller size)
+      !python train_model3_conf_att.py               (3rd AMAR variant with attention layer)
       
       !python train_model1_strategy.py                (1st AMAR variant with ELMO and smaller OpenKE emb.)
-      !python train_model2_conf2_strategy.py          (2nd AMAR variant 2nd conf with ELMO and smaller OpenKE emb)
-      !python train_model3_conf2_strategy_att.py      (3rd AMAR variant 2nd conf and attention with ELMO and smaller OpenKE emb)
+      !python train_model2_conf_strategy.py          (2nd AMAR variant with ELMO and smaller OpenKE emb)
+      !python train_model3_conf_strategy_att.py      (3rd AMAR variant with attention layers with ELMO and smaller OpenKE emb)
       
       !python train_model1_graph_bert.py              (1st AMAR variant with USE and OpenKE emb.)
-      !python train_model2_conf.py                    (2nd AMAR variant 2nd conf with USE and OpenKE emb)
-      !python train_model3_conf2_att.py               (3rd AMAR variant 2nd conf and attention with USE and OpenKE emb)
+      !python train_model2_conf.py                    (2nd AMAR variant with USE and OpenKE emb)
+      !python train_model3_conf_att.py               (3rd AMAR variant with attention layers with USE and OpenKE emb)
       
-Based on the specific architecture to evaluate and the input embedding to use, it is necessary to choose the train files corresponding to the chosen architecture. **Before starting the execution, it is necessary to specify the embedding filenames in the chosen train file**. After the execution of the training phase, the model will be created and stored in folder “results”.
+Based on the specific architecture to evaluate and the input embedding to use, it is necessary to choose the train files corresponding to the chosen architecture. **Before starting the execution, it is necessary to specify the embedding filenames in the chosen train file**
+
+
+For 2nd and 3rd Amar variants, 2 input configurations are available:
+- CONF1, Entity Based: (Graph items + Contextual items) + (Graph users + Contextual users)
+- CONF2, Feature Based: (Graph items + Graph users) + (Contextual items + Contextual users)
+
+The preferred confiuguration can be chosen in the train file.
+
+After the execution of the training phase, the model will be created and stored in folder “results”.
 
 **5.	Insert as fourth cell in the notebook one of these commands (should correspond to the train):**
 
