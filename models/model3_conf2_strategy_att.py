@@ -26,7 +26,7 @@ def run_model(X_graph,X_bert,dim_graph,dim_bert,y,epochs,batch_size):
 
   concatenated = keras.layers.Concatenate()([dense_graph, dense_bert])
 
-  #BLOCCO DI ATTENZIONE 1
+  #ATTENTION BLOCK 1
   attention_probs = keras.layers.Dense(200, activation='softmax')(concatenated)
   attention_mul = keras.layers.multiply([concatenated, attention_probs])
 

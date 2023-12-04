@@ -22,16 +22,16 @@ def run_model(X,y,dim_embeddings,epochs,batch_size):
 
   concatenated = keras.layers.Concatenate()([concatenated_1, concatenated_2])
 
-  #BLOCCO DI ATTENZIONE 1
+  #ATTENTION BLOCK 1
   attention_probs = keras.layers.Dense(200, activation='softmax')(concatenated)
   attention_mul = keras.layers.multiply([concatenated, attention_probs])
 
   '''
-  #BLOCCO DI ATTENZIONE 2
+  #ATTENTION BLOCK 2
   attention_probs = keras.layers.Dense(200, activation='softmax')(attention_mul)
   attention_mul = keras.layers.multiply([attention_mul, attention_probs])
 
-  #BLOCCO DI ATTENZIONE 3
+  #ATTENTION BLOCK 3
   attention_probs = keras.layers.Dense(200, activation='softmax')(attention_mul)
   attention_mul = keras.layers.multiply([attention_mul, attention_probs])
   '''
