@@ -1,9 +1,3 @@
-import tensorflow as tf
-from tensorflow import keras
-from numpy import loadtxt
-from keras.models import Sequential
-from keras.layers import Dense
-import os
 from utilities.utils import read_graph_embeddings,read_ratings,matching_graph_emb_id
 from models.model1 import run_model
 

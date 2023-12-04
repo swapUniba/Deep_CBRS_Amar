@@ -1,12 +1,6 @@
 import pandas as pd
-import csv
 import numpy as np
-import json
 import tensorflow as tf
-from tensorflow import keras
-from numpy import loadtxt
-from keras.models import Sequential
-from keras.layers import Dense
 from utilities.utils import read_ratings,read_graph_embeddings,read_bert_embedding,top_scores,matching_Bert_Graph
 
 graph_embeddings = read_graph_embeddings("embeddings/HolEembedding_768.json")

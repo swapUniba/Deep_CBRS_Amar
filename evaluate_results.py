@@ -26,7 +26,13 @@ if __name__ == "__main__":
         cutoff = str(root)[root.rfind(os.sep):].split("_")[1]
         print(cutoff)
         results_filename = os.sep.join([root, "results.tsv"])
-        mimir_output = subprocess.call(["java", "-jar", "experiments/binaries/mimir.jar",
+        print(["java", "-jar", "experiments/binaries/mimir.jar",
+                                                "-holdout",
+                                                "-cutoff", cutoff,
+                                                "-test", test_filename,
+                                                "-predictions", os.sep.join([root, files[0]]),
+                                                "-results", results_filename])
+        mimir_output = subprocess.check_output(["java", "-jar", "experiments/binaries/mimir.jar",
                                                 "-holdout",
                                                 "-cutoff", cutoff,
                                                 "-test", test_filename,

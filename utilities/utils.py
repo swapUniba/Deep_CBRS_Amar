@@ -2,11 +2,6 @@ import pandas as pd
 import csv
 import numpy as np
 import json
-import tensorflow as tf
-from tensorflow import keras
-from numpy import loadtxt
-from keras.models import Sequential
-from keras.layers import Dense
 
 def read_bert_embeddings(filename_users,filename_items):
   #reading embeddings

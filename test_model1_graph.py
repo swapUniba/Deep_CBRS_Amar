@@ -1,12 +1,6 @@
 import pandas as pd
-import csv
 import numpy as np
-import json
 import tensorflow as tf
-from tensorflow import keras
-from numpy import loadtxt
-from keras.models import Sequential
-from keras.layers import Dense
 from utilities.utils import read_graph_embeddings,read_ratings,matching_graph_emb_id,top_scores
 
 ent_embeddings = read_graph_embeddings('embeddings/TRANSEembedding_768.json')

@@ -1,12 +1,6 @@
 import pandas as pd
-import csv
 import numpy as np
-import json
 import tensorflow as tf
-from tensorflow import keras
-from numpy import loadtxt
-from keras.models import Sequential
-from keras.layers import Dense
 from utilities.utils import read_bert_embeddings,read_ratings,matching_bert_emb_id,top_scores
 
 user_embeddings,item_embeddings = read_bert_embeddings("embeddings/UserProfiles_lastLayer.json","embeddings/ITEM_embeddingslastlayer.json")

@@ -1,8 +1,5 @@
 import tensorflow as tf
 from tensorflow import keras
-from numpy import loadtxt
-from keras.models import Sequential
-from keras.layers import Dense
 
 #CONFIGURATION 2 - strategy 1
 def run_model(X_graph,X_bert,dim_graph,dim_bert,y,epochs,batch_size):

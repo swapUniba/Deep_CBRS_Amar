@@ -1,10 +1,4 @@
-import tensorflow as tf
-from tensorflow import keras
-from numpy import loadtxt
-from keras.models import Sequential
-from keras.layers import Dense
-import os
-from utilities.utils import read_ratings,read_graph_embeddings,read_bert_embedding,matching_userBert_itemGraph,matching_userGraph_itemBert
+from utilities.utils import read_ratings,read_graph_embeddings,read_bert_embedding,matching_userGraph_itemBert
 from models.model1 import run_model
 
 user_embeddings = read_graph_embeddings("embeddings/TRANSHembedding_768.json")

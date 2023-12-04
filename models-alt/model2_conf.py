@@ -1,8 +1,5 @@
 import tensorflow as tf
 from tensorflow import keras
-from numpy import loadtxt
-from keras.models import Sequential
-from keras.layers import Dense
 
 #CONFIGURATION 1
 def run_conf_1(X,y,dim_embeddings,epochs,batch_size):
