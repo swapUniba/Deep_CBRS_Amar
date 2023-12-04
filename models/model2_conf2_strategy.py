@@ -4,7 +4,7 @@ from numpy import loadtxt
 from keras.models import Sequential
 from keras.layers import Dense
 
-#CONFIGURAZIONE 2 - strategia 1
+#CONFIGURATION 2 - strategy 1
 def run_model(X_graph,X_bert,dim_graph,dim_bert,y,epochs,batch_size):
   model = keras.Sequential()
   input_users_1 = keras.layers.Input(shape=(dim_graph,))

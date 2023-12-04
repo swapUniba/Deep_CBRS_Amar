@@ -4,7 +4,7 @@ from numpy import loadtxt
 from keras.models import Sequential
 from keras.layers import Dense
 
-#CONFIGURAZIONE 2
+#CONFIGURATION 2
 def run_model(X,y,dim_embeddings,epochs,batch_size):
   model = keras.Sequential()
   input_users_1 = keras.layers.Input(shape=(dim_embeddings,))
