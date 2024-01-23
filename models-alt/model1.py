@@ -1,9 +1,6 @@
 import tensorflow as tf
 from tensorflow import keras
-from numpy import loadtxt
-from keras.models import Sequential
-from keras.layers import Dense
-from models.DataGenerator import DataGenerator as dg
+
 
 # define the keras model
 def run_model(X, y, dim_embeddings, epochs, batch_size):
@@ -22,9 +19,12 @@ def run_model(X, y, dim_embeddings, epochs, batch_size):
     d1 = keras.layers.Dense(64, activation=tf.nn.relu)(concatenated)
     d2 = keras.layers.Dense(64, activation=tf.nn.relu)(d1)
     out = keras.layers.Dense(1, activation=tf.nn.sigmoid)(d2)
-    model = keras.models.Model(inputs=[input_users,input_items],outputs=out)
-    model.compile(loss='binary_crossentropy', optimizer=tf.keras.optimizers.Adam(learning_rate=0.001, beta_1=0.9), metrics=['accuracy'])
-    model.fit([X[:,0],X[:,1]], y, epochs=epochs, batch_size=batch_size)
-
+    model = keras.models.Model(inputs=[input_users, input_items], outputs=out)
+    model.compile(
+        loss="binary_crossentropy",
+        optimizer=tf.keras.optimizers.Adam(learning_rate=0.001, beta_1=0.9),
+        metrics=["accuracy"],
+    )
+    model.fit([X[:, 0], X[:, 1]], y, epochs=epochs, batch_size=batch_size)
 
     return model
